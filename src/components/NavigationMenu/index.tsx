@@ -13,21 +13,21 @@ const NavigationMenu: React.FC<any> = () => {
             className="text-white fill-current"
           />
         </a>
-        <a rel="index" href="/" className="h-12">
+        <a rel="index" href="/about" className="h-12">
           <FontAwesomeIcon
             icon="user-tie"
             size="2x"
             className="text-white fill-current"
           />
         </a>
-        <a rel="index" href="/" className="h-12">
+        <a rel="index" href="/skills" className="h-12">
           <FontAwesomeIcon
             icon="cog"
             size="2x"
             className="text-white fill-current"
           />
         </a>
-        <a rel="index" href="/" className="h-12">
+        <a rel="index" href="/contact" className="h-12">
           <FontAwesomeIcon
             icon="envelope"
             size="2x"

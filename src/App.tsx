@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { ROUTES } from "@/constants";
-import { HomePage } from "@/pages";
+import { AboutPage, ContactPage, HomePage, SkillsPage } from "@/pages";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -14,8 +14,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        {" "}
         <Route path={ROUTES.HomePage} exact component={HomePage} />
+        <Route path={ROUTES.ContactPage} exact component={ContactPage} />
+        <Route path={ROUTES.AboutPage} exact component={AboutPage} />
+        <Route path={ROUTES.SkillsPage} exact component={SkillsPage} />
       </Switch>
     </Router>
   );

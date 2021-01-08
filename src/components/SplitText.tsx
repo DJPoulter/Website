@@ -1,3 +1,4 @@
+import Boop from "@/components/Boop";
 import React from "react";
 
 type Props = {
@@ -9,13 +10,11 @@ const SplitText: React.FC<any> = ({ text }: Props) => {
     <span>
       {text.split("").map((char, index) => {
         return (
-          <span
+          <Boop
             // eslint-disable-next-line react/no-array-index-key
             key={index}
-            className=" cursor-default hover:text-white hover:animate-pulse"
-          >
-            {char}
-          </span>
+            text={char}
+          />
         );
       })}
     </span>
