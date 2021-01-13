@@ -1,7 +1,7 @@
 import Spacer from "@/components/Spacer";
 import React from "react";
 import Particles from "react-particles-js";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HeaderSection: React.FC<any> = () => {
   return (
@@ -64,14 +64,14 @@ const HeaderSection: React.FC<any> = () => {
             I am a full stack developer.
           </span>
           <Spacer height={5} />
-          <Link to="/CV-DanielPoulter.pdf" download target="_self">
+          <NavLink to="/CV-DanielPoulter.pdf" download target="_blank">
             <button
               className="shadow bg-red-400 hover:bg-red-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded text-base"
               type="button"
             >
               Download Resume
             </button>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>
