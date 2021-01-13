@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
@@ -18,7 +19,7 @@ module.exports = {
     },
     fontFamily: {
       // eslint-disable-next-line prettier/prettier
-      'sans': ["Volkorn", "Sans-serif"],
+      'sans': ["Raleway", "Sans-serif"],
     },
   },
   variants: {

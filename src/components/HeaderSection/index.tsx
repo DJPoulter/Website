@@ -1,9 +1,9 @@
 import React from "react";
 import Particles from "react-particles-js";
 
-const AboutPage: React.FC<any> = () => {
+const HeaderSection: React.FC<any> = () => {
   return (
-    <div>
+    <div className="section-content" id="home">
       <Particles
         style={{
           maxWidth: "100%",
@@ -14,15 +14,15 @@ const AboutPage: React.FC<any> = () => {
           left: "0",
           zIndex: "-10",
         }}
-        height="95vh"
+        height="100vh"
         width="100vw"
         params={{
           background: {
             color: {
               value: {
-                r: 0,
-                g: 0,
-                b: 0,
+                r: 31,
+                g: 34,
+                b: 41,
               },
             },
           },
@@ -39,6 +39,7 @@ const AboutPage: React.FC<any> = () => {
             },
           },
           interactivity: {
+            detect_on: "window",
             events: {
               onhover: {
                 enable: true,
@@ -50,7 +51,7 @@ const AboutPage: React.FC<any> = () => {
       />
       <div
         className="flex flex-wrap items-center justify-center"
-        style={{ height: "95vh" }}
+        style={{ height: `calc(100vh - 56px)` }}
       >
         <div className="text-4xl font-extrabold text-center text-white">
           <span>{"Hello, I am "}</span>
@@ -62,9 +63,8 @@ const AboutPage: React.FC<any> = () => {
           </span>
         </div>
       </div>
-      <div className="bg-white" />
     </div>
   );
 };
 
-export default AboutPage;
+export default HeaderSection;

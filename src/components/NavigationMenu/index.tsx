@@ -1,68 +1,47 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { Nav, Navbar } from "react-bootstrap";
+import { scroller } from "react-scroll";
 
 const NavigationMenu: React.FC<any> = () => {
   return (
-    <div className="h-screen bg-CDGreen w-16 flex flex-col content-between justify-between">
-      <div>Daniel</div>
-      <div className="flex flex-col items-center">
-        <a rel="index" href="/" className="h-12">
-          <FontAwesomeIcon
-            icon="home"
-            size="2x"
-            className="text-white fill-current"
-          />
-        </a>
-        <a rel="index" href="/about" className="h-12">
-          <FontAwesomeIcon
-            icon="user-tie"
-            size="2x"
-            className="text-white fill-current"
-          />
-        </a>
-        <a rel="index" href="/skills" className="h-12">
-          <FontAwesomeIcon
-            icon="cog"
-            size="2x"
-            className="text-white fill-current"
-          />
-        </a>
-        <a rel="index" href="/contact" className="h-12">
-          <FontAwesomeIcon
-            icon="envelope"
-            size="2x"
-            className="text-white fill-current"
-          />
-        </a>
-      </div>
-      <div className="flex flex-col items-center">
-        <a
-          href="https://www.linkedin.com/in/danpoulter"
-          className="h-12"
-          target="_blank"
-          rel="noreferrer"
+    <Navbar bg="dark" variant="dark" style={{ position: "sticky" }} fixed="top">
+      <Nav className="mr-auto text-white " style={{ margin: "auto" }}>
+        <Nav.Link
+          onClick={() =>
+            scroller.scrollTo("home", {
+              smooth: true,
+              offset: -70,
+              duration: 500,
+            })
+          }
         >
-          <FontAwesomeIcon
-            icon={["fab", "linkedin-in"]}
-            size="lg"
-            className="text-white fill-current"
-          />
-        </a>
-
-        <a
-          href="http://github.com/djpoulter"
-          className="h-12"
-          target="_blank"
-          rel="noreferrer"
+          Home
+        </Nav.Link>
+        <Nav.Link
+          onClick={() =>
+            scroller.scrollTo("about", {
+              smooth: true,
+              offset: -70,
+              duration: 500,
+            })
+          }
         >
-          <FontAwesomeIcon
-            icon={["fab", "github"]}
-            size="lg"
-            className="text-white fill-current"
-          />
-        </a>
-      </div>
-    </div>
+          About
+        </Nav.Link>
+        <Nav.Link
+          onClick={() =>
+            scroller.scrollTo("contact", {
+              smooth: true,
+              offset: -70,
+              duration: 500,
+            })
+          }
+        >
+          Contact
+        </Nav.Link>
+      </Nav>
+    </Navbar>
   );
 };
 
